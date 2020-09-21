@@ -1,0 +1,6 @@
+date	month	apart	name	pre	user_id	lang	summa
+01.04.2020	4	46	Mamenko	mamenko	mamenko	0	100
+01.05.2020	5	46	Mamenko	mamenko	mamenko	0	100
+01.06.2020	6	46	Mamenko	mamenko	mamenko	0	100
+01.07.2020	7	46	Mamenko	mamenko	mamenko	0	100
+14.08.2020	8	46	Mamenko	mamenko	mamenko	0	100
