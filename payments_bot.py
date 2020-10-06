@@ -205,7 +205,7 @@ def show_info(update, context):
         for row in data[["year", "month"]].drop_duplicates().sort_values(by=["year", "month"], ascending=False).head(12).itertuples():
             buttons.append("{} {}".format(MONTHS[lang][row.month - 1], row.year))
         reply_markup = ReplyKeyboardMarkup(create_keyboard(buttons), resize_keyboard=True)
-        send(context.bot, chat_id, text = TEMPLATE_SELECT_MONTH[lang][:-1] + " или отправьте /exit.", reply_markup=reply_markup)
+        send(context.bot, chat_id, text = TEMPLATE_SELECT_MONTH[lang][:-1] + TEMPLATE_COMMAND_EXIT, reply_markup=reply_markup)
         return WAITING_MONTH
     else:
         text = TEMPLATE_BILLS_NOT_FOUND[lang]
@@ -235,7 +235,7 @@ def month_info(update, context):
             send(context.bot, chat_id, text, reply_markup=ReplyKeyboardRemove())
         return ConversationHandler.END
     else:
-        text = TEMPLATE_SELECT_AVAILABLE_MONTH[lang][:-1] + " или отправьте /exit."
+        text = TEMPLATE_SELECT_AVAILABLE_MONTH[lang][:-1] + TEMPLATE_COMMAND_EXIT
         send(context.bot, chat_id, text)
         return WAITING_MONTH
 

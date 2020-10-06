@@ -60,6 +60,11 @@ TEMPLATE_FOOTER = {
     EN: "\n\nThank you for living at Akacia apartments! ❤"
 }
 
+TEMPLATE_KOMMUNALKA_MONTH = {
+    RU: "\nКоммунальные услуги за <b>{}</b>:\n",
+    SR: "\nKomunalije za <b>{}</b>:\n",
+    EN: "\nMunicipal services for <b>{}</b>:\n"
+}
 
 TEMPLATE_KOMMUNALKA = {
     RU: ("— вода <b>{:.2f}€</b>\n— электричество <b>{:.2f}€</b>\n"
@@ -129,9 +134,10 @@ TEMPLATE_NO = "Нет. НЕТ! Срочная отмена!1!"
 TEMPLATE_MANAGER_NOT_FOUND = "https://www.youtube.com/watch?v=7OBx-YwPl8g"
 TEMPLATE_MANAGER_FOUND = "Отправьте команду /add для добавления новой записи о внесении денег."
 TEMPLATE_ERROR_IN_APART = "Неверный номер квартиры, имя жильца или нет записей о проживании."
-TEMPLATE_SEND_APART = "Отправьте номер квартиры или /exit."
-TEMPLATE_SEND_RENTER = "Отправьте имя арендатора из квартиры <b>{}</b> или /exit."
-TEMPLATE_SEND_SUM = "Отправьте сумму, принятую от <b>{}</b> из квартиры <b>{}</b> или /exit."
+TEMPLATE_COMMAND_EXIT = " или отправьте /exit."
+TEMPLATE_SEND_APART = "Отправьте номер квартиры" + TEMPLATE_COMMAND_EXIT
+TEMPLATE_SEND_RENTER = "Отправьте имя арендатора из квартиры <b>{}</b>" + TEMPLATE_COMMAND_EXIT
+TEMPLATE_SEND_SUM = "Отправьте сумму, принятую от <b>{}</b> из квартиры <b>{}</b>" + TEMPLATE_COMMAND_EXIT
 TEMPLATE_ERROR_SUM = "Неверная сумма. Отправьте целое число [и комментарий после пробела]."
 TEMPLATE_EXIT_CONVERSATION = "Вы вышли из диалога. " + TEMPLATE_MANAGER_FOUND
 TEMPLATE_CONFIRM_SUM = "Внести <b>{}€</b> от <b>{}</b> в счёт оплаты квартиры <b>{}</b>?"
